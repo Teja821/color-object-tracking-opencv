@@ -13,11 +13,14 @@ This project demonstrates real-time **multi-color object tracking** using OpenCV
 
 ---
 
-## 🖼️ Demo
+### 🖼️ Demo
 
-> 📸 **Add your screenshot below this line**  
-> *(Tip: After uploading your image to GitHub, add it like this)*  
-> `![Tracking Demo](screenshot.png)`
+Here are some demo screenshots of the project in action:
+
+![Screenshot 1](images/Screenshot%20(246).png)
+![Screenshot 2](images/Screenshot%20(250).png)
+![Screenshot 3](images/Screenshot%20(252).png)
+
 
 ---
 
