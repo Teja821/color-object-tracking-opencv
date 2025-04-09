@@ -76,11 +76,54 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
-📸 Screenshots
-You can add multiple screenshots here
-Example:
-![Tracking Green Ball](green-ball-demo.png)
-![HSV Adjustments](hsv-ui.png)
+pip install opencv-python numpy
+
+🔧 How to Use
+Clone this repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/Teja821/color-object-tracking-opencv.git
+cd color-object-tracking-opencv
+Run the Python script:
+
+bash
+Copy
+Edit
+python color_tracking.py
+Adjust the HSV sliders to match the object color you want to track.
+
+Press ESC to exit the application.
+
+🧠 Sample Code Snippet
+python
+Copy
+Edit
+import cv2
+import numpy as np
+
+cap = cv2.VideoCapture(0)
+
+while True:
+    _, frame = cap.read()
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+    lower_bound = np.array([35, 100, 100])
+    upper_bound = np.array([85, 255, 255])
+
+    mask = cv2.inRange(hsv, lower_bound, upper_bound)
+    result = cv2.bitwise_and(frame, frame, mask=mask)
+
+    cv2.imshow('Mask', mask)
+    cv2.imshow('Tracking', result)
+
+    if cv2.waitKey(1) == 27:  # ESC key
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+
 
 🤝 Credits
 Created by Teja821
